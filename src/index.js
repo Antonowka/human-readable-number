@@ -1,16 +1,14 @@
 module.exports = function toReadable(number) {
-    var string = number.toString(),
-        units, tens, scales, start, end, chunks, chunksLen, chunk, ints, i, word, words;
+    var string = number.toString(), units, tens, scales, start, end, chunks, chunksLen, chunk, ints, i, word, words;
 
     if (parseInt(string) === 0) {
         return 'zero';
     }
 
     units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
-
-    tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-
+    tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
     scales = [''];
+
 
     start = string.length;
 
